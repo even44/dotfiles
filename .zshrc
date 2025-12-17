@@ -29,6 +29,8 @@ zinit light zsh-users/zsh-completions
 # Add auto suggestions
 zinit light zsh-users/zsh-autosuggestions
 
+zinit light Aloxaf/fzf-tab
+
 autoload -U compinit && compinit
 
 
@@ -50,7 +52,15 @@ setopt hisT_find_no_dups
 zstyle ':completion:*' matcher-list 'm:{a-z}={A-Za-z}'
 
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
+zstyle ':completion:*' menu no
+zstyle ':fzf-tab:complete:cd:*' fzf-preview 'ls --color $realpath'
 
 alias ls='ls --color'
+alias nivm='nvim'
+alias nmiv='nvim'
+alias c='clear'
+
+eval "$(fzf --zsh)"
+
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
