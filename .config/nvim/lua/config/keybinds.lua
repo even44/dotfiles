@@ -16,3 +16,10 @@ vim.keymap.set('n', '<leader>ff', builtin.find_files, { desc = 'Telescope find f
 vim.keymap.set('n', '<leader>fg', builtin.live_grep, { desc = 'Telescope live grep' })
 vim.keymap.set('n', '<leader>fb', builtin.buffers, { desc = 'Telescope buffers' })
 vim.keymap.set('n', '<leader>fh', builtin.help_tags, { desc = 'Telescope help tags' })
+
+
+-- Tmux fix
+vim.keymap.set('n', '<C-h>', '<cmd>TmuxNavigateLeft<CR>', { desc = 'window left'})
+vim.keymap.set('n', '<C-l>', '<cmd>TmuxNavigateRight<CR>', { desc ='window right'})
+vim.keymap.set('n', '<C-j>', '<cmd>TmuxNavigateDown<CR>', { desc ='window down'})
+vim.keymap.set('n', '<C-k>', '<cmd>TmuxNavigateUp<CR>', { desc ='window up'})
