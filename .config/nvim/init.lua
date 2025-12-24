@@ -4,5 +4,4 @@ require("config.keybinds")
 require("config.theme")
 require("config.custom-settings")
 require("config.harpoon-telescope")
-require("config.treeshitter")
 
