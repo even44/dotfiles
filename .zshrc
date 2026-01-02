@@ -11,6 +11,8 @@ if [ ! -d "$ZINIT_HOME" ]; then
    git clone https://github.com/zdharma-continuum/zinit.git "$ZINIT_HOME"
 fi
 
+precmd () { echo -n "\x1b]1337;CurrentDir=$(pwd)\x07" }
+
 eval "$(/home/linuxbrew/.linuxbrew/bin/brew shellenv)"
 
 # Source/Load zinit
