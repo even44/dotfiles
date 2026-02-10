@@ -35,6 +35,7 @@ autoload -U compinit && compinit
 
 # Keybindings
 bindkey -e
+bindkey "^[[3~" delete-char
 
 HISTSIZE=500
 HISTFILE=~/.zsh_history
